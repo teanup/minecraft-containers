@@ -83,7 +83,7 @@ volumes:
 /opt/plugins/        Baked-in plugin jars (set by PLUGIN_DIR)
 
 /usr/local/bin/
-  entrypoint         Container entrypoint script
+  minecraft          Container entrypoint script
   healthcheck        Container health check script
 ```
 

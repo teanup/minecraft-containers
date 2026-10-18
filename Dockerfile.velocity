@@ -4,9 +4,9 @@ FROM docker.io/library/azul-zulu:25-jre-headless-alpine
 
 RUN apk add --no-cache bash jq
 
-COPY entrypoint.sh /usr/local/bin/entrypoint
+COPY entrypoint.sh /usr/local/bin/minecraft
 COPY healthcheck.sh /usr/local/bin/healthcheck
-RUN chmod +x /usr/local/bin/entrypoint /usr/local/bin/healthcheck
+RUN chmod +x /usr/local/bin/minecraft /usr/local/bin/healthcheck
 
 RUN mkdir -p /server && chmod 1777 /server
 
@@ -15,7 +15,7 @@ EXPOSE 25565
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 CMD ["healthcheck"]
 
-ENTRYPOINT ["entrypoint", "velocity"]
+ENTRYPOINT ["minecraft", "velocity"]
 
 COPY server.jar /opt/server/server.jar
 
