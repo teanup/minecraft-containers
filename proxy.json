@@ -3,8 +3,9 @@
   "base": "velocity",
   "plugins": [
     { "name": "ViaVersion", "source": "github", "slug": "ViaVersion/ViaVersion" },
-    { "name": "CommandWhitelist", "source": "modrinth", "slug": "commandwhitelist" },
+    { "name": "MiniMOTD", "source": "modrinth", "slug": "minimotd" },
     { "name": "VeloAuth", "source": "modrinth", "slug": "veloauth" },
+    { "name": "CommandWhitelist", "source": "modrinth", "slug": "commandwhitelist" },
     { "name": "SkinsRestorer", "source": "modrinth", "slug": "skinsrestorer" }
   ]
 }
